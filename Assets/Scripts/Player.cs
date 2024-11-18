@@ -86,7 +86,7 @@ public class Player : MonoBehaviour
     {
         if (hasShield)
         {
-            // Lose the shield
+            // Lose shield
             hasShield = false;
             gameManager.PlayPowerDown();  // Play the powerdown sound when the shield is lost
             if (shieldEffect != null)
@@ -96,7 +96,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            // No shield, lose a life
+            // Lose a life from lives count if there is no shield
             lives--;
         }
 
