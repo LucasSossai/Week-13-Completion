@@ -17,19 +17,27 @@ public class MovingObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (whatAmI == 1) 
+        if (whatAmI == 1)
         {
             //I am the Bullet
             transform.Translate(new Vector3(0, 1, 0) * Time.deltaTime * 8f);
-        } else if (whatAmI == 2)
+        }
+        else if (whatAmI == 2)
         {
             //I am the EnemyOne
             transform.Translate(new Vector3(0, 1, 0) * Time.deltaTime * 4f);
-        } else if (whatAmI == 3)
+        }
+        else if (whatAmI == 3)
         {
             //I am the Cloud
             transform.Translate(new Vector3(0, -1, 0) * Time.deltaTime * Random.Range(3f, 6f) * gameManager.cloudSpeed);
-        } else if (whatAmI == 4)
+        }
+        else if (whatAmI == 4)
+        {
+            //I am a coin
+            transform.Translate(new Vector3(0, -1, 0) * Time.deltaTime * 2f);
+        }
+        else if (whatAmI == 5)
         {
             //I am the Powerup
             transform.Translate(new Vector3(0, -1, 0) * Time.deltaTime * 6f);
